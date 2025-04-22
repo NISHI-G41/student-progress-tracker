@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="teacherName"></span></h1>
+        
+        <!-- Test Creation Section -->
+        <div class="section">
+            <h2>Create New Test</h2>
+            <form id="teacherTestForm">
+                <input type="text" id="teacherBatch" placeholder="Batch Number" required>
+                <input type="text" id="teacherTestName" placeholder="Test Name" required>
+                <div id="teacherQuestions">
+                    <div class="question">
+                        <input type="text" placeholder="Question 1" required>
+                        <input type="text" placeholder="Correct Answer" required>
+                    </div>
+                </div>
+                <button type="button" onclick="addTeacherQuestion()">Add Question</button>
+                <button type="submit">Save Test</button>
+            </form>
+        </div>
+
+        <!-- Test Reports Section -->
+        <div class="section">
+            <h2>Test Reports</h2>
+            <div id="teacherTests"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
